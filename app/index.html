@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23ff6b4a'/%3E%3Ccircle cx='16' cy='19' r='8' fill='%23ffb347'/%3E%3C/svg%3E">
+<meta name="description" content="An offline guide and tracker for all 55 Grand Theft Auto VI trophies on PlayStation 5: official names, descriptions and grades, an original how-to for every trophy with its sources, a platinum roadmap, missable warnings, and a checklist saved in your browser.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<noscript><p style="padding:1rem 2rem">This guide is an interactive checklist and needs JavaScript. The full trophy data is in <code>data/trophies.json</code>.</p></noscript>
+<header class="hero">
+  <div class="hero-sun" aria-hidden="true"></div>
+  <div class="hero-text">
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; 55 trophies</p>
+    <h1>Leonida Legend</h1>
+    <p class="sub">The complete trophy guide &amp; tracker — every trophy's official name, description and grade, an original guide with its sources, a road to platinum, and a checklist that lives in your browser. Works fully offline.</p>
+  </div>
+  <div class="hero-progress" aria-live="polite">
+    <div class="ring" id="ring" style="--pct:0"><span id="ring-num">0%</span></div>
+    <p id="progress">0 of 55 earned</p>
+    <p class="hero-counts" id="grade-counts"></p>
+  </div>
+</header>
+
+<main>
+<section class="panel warn" id="missable-panel">
+  <h2>⚠ The one trophy you can miss</h2>
+  <p><strong>Positive Mental Attitude</strong> (meditate at every spot across Leonida) is the only trophy reported as possibly missable. One meditation at Jason's house is offered only during <strong>Chapter 1</strong> — in the morning after the mission <em>Down to Earth</em>, Lucia walks to the balcony and invites you to meditate. Accept it. After Chapter 1 it is gone for good, and it is not yet confirmed whether that one counts toward the trophy. Everything else on this list can be done after the story in free-roam. <a href="#t-28">Jump to its guide ↓</a></p>
+</section>
+
+<section class="panel" id="roadmap">
+  <h2>Road to the platinum — “Vice Got a Price!”</h2>
+  <p class="roadmap-facts">Difficulty <strong>4/10</strong> &middot; about <strong>200 hours</strong> &middot; <strong>1 playthrough</strong> &middot; <strong>0 online trophies</strong> &middot; no difficulty settings &middot; cheats disable trophies and saving, so keep them off. Source: <a href="https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/" target="_blank" rel="noopener">PowerPyx trophy guide &amp; roadmap</a>.</p>
+  <ol class="steps">
+    <li><strong>Step 1 — Play the story (60–80 hours).</strong> Finish the 5 chapters and enjoy it. Do the Chapter 1 balcony meditation (see the warning above). Scan new vehicles with the WAiNK app and study animals with binoculars as you go — both count toward 100% later. Do optional missions as they appear; you need any 100 for the 100% checklist and there are far more than that.</li>
+    <li><strong>Step 2 — The 100% checklist (about 100 hours).</strong> After the story, open Progress &gt; Stats &gt; 100% Completion. It is roughly 60% of everything in the game, not true 100%: any 70 of 80 challenges, 300 stunts, 200 of 277 vehicles scanned, 100 of 255 animals studied, all robberies, all shooting ranges, all drone races, Bret's quests. Progress from the story already counts.</li>
+    <li><strong>Step 3 — Cleanup (about 10 hours).</strong> Finish the Strangers &amp; Freaks strands, the side-character questlines, and whatever miscellaneous trophies are left. Five trophies are still unconfirmed by the guide sites — this guide says so honestly on each one instead of guessing.</li>
+  </ol>
+</section>
+
+<section class="panel controls-panel">
+  <h2>Your checklist</h2>
+  <div class="controls">
+    <label class="search">Search <input id="search" type="search" placeholder="Trophy name, mission, keyword…" autocomplete="off"></label>
+    <label>Kind
+      <select id="kind">
+        <option value="all">All kinds</option>
+        <option value="story">Story</option>
+        <option value="missable">Missable</option>
+        <option value="collectibles">Collectibles</option>
+        <option value="activities">Activities</option>
+        <option value="online">Online</option>
+      </select>
+    </label>
+    <label>Grade
+      <select id="grade">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+    </label>
+    <label>Sort
+      <select id="sort">
+        <option value="default">List order</option>
+        <option value="grade">Grade (best first)</option>
+        <option value="name">Name A–Z</option>
+      </select>
+    </label>
+    <label class="check"><input id="hide-earned" type="checkbox"> Hide earned</label>
+    <label class="check"><input id="spoilers" type="checkbox" checked> Hide story spoilers</label>
+  </div>
+  <div class="controls-row">
+    <button id="export" type="button">Export progress</button>
+    <label class="import">Import progress <input id="import" type="file" accept="application/json"></label>
+    <button id="reset" type="button">Reset checklist</button>
+    <span class="hint">Progress is saved in this browser only (localStorage). Export it to keep a backup.</span>
+  </div>
+  <p class="count-line" id="count-line"></p>
+</section>
+
+<section id="list" aria-live="polite"></section>
+
+<section class="panel" id="sources">
+  <h2>Sources &amp; how this guide was made</h2>
+  <p>Every trophy's <strong>name, description and grade</strong> was verified on 19 November 2026 against two independent trophy lists that agree on all 55: <a href="https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/" target="_blank" rel="noopener">Exophase</a> and <a href="https://psnprofiles.com/trophies/43531-grand-theft-auto-vi" target="_blank" rel="noopener">PSNProfiles</a>. PSN progress targets (for example 250 stunts, 42 shooting-range challenges, 14 drone-race locations, 18 meditation spots, 52 areas) come from PSNProfiles. How-to details come from <a href="https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/" target="_blank" rel="noopener">PowerPyx's GTA 6 Trophy Guide &amp; Roadmap</a>, and the missable warning is cross-checked with <a href="https://gta-zone.com/news/gta-6-trophies-achievements/" target="_blank" rel="noopener">GTA Zone's trophy list</a>. Each trophy below links its own sources.</p>
+  <p>All guide text is written in our own words — it paraphrases and synthesises, it does not copy other guides. Where PowerPyx marks a trophy's method as not yet known (5 trophies), this guide says so plainly instead of inventing a method. Trophy data is also stored in this app at <code>data/trophies.json</code>.</p>
+</section>
+</main>
+
+<footer>
+  <p>Unofficial fan guide. Not affiliated with, endorsed by, or connected to Rockstar Games or Take-Two Interactive. Grand Theft Auto, GTA, and related marks are trademarks of Take-Two Interactive. No official artwork or logos are used; the design is original. Game released 19 November 2026; guide data verified 19 November 2026.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
